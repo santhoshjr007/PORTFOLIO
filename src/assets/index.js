@@ -3,10 +3,10 @@ import nairobi from './backgrounds/nairobi.png';
 import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
 
-import logo from './logo/logo-black.png';
+import logo from './logo/wlogo2.png';
 import logotext from './logo/logo-text-black.png';
 
-import shaq from './personal/shaq.png';
+import shaq from './personal/santhu.png';
 
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
@@ -49,6 +49,8 @@ import math from './projects/math-magicians.png';
 import movie from './projects/movie-metro.png';
 import nyeusi from './projects/nyeusi.png';
 import space from './projects/space-hub.png';
+import promptix from './projects/promptix.png';
+import ngo from './projects/ngo.png';
 
 export {
   bwmap,
@@ -86,6 +88,8 @@ export {
   redux,
   tailwind,
   typescript,
+  promptix,
+  ngo,
   komikult,
   leaderboard,
   math,

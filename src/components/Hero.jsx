@@ -2,19 +2,19 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { shaq, bwmap, worldmap } from '../assets';
+import { shaq, bwmap, worldmap, download, downloadHover } from '../assets';
 
 const Hero = () => {
   return (
     <>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
+      <div className="absolute top-0 left-0 z-0 h-[100vh] w-full">
         <img
           src={bwmap}
           alt="world map"
           className="w-full h-full sm:block hidden object-cover"
         />
       </div>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
+      <div className="absolute top-0 left-0 z-0 h-[100vh] w-full">
         <img
           src={worldmap}
           alt="world map"
@@ -41,17 +41,46 @@ const Hero = () => {
               <span
                 className="sm:text-battleGray sm:text-[90px] 
                 text-eerieBlack text-[50px] font-mova
-                font-extrabold uppercase">
-                Shaquille
+                font-extrabold uppercase whitespace-nowrap">
+                SANTHOSH JR
               </span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              Lorem ipsum dolor sit amet. <br className="sm:block hidden" />
-              consectetur adipisicing elit deleniti, voluptas.
+            <p className="mt-3 text-eerieBlack font-medium
+              lg:text-[22px] sm:text-[18px] xs:text-[15px] text-[13px]
+              lg:leading-[34px] leading-[26px] tracking-wide">
+              I build scalable web apps with MERN.<br />
+              Exploring AI/ML &amp; data science to create smart solutions.
             </p>
+
+            <a
+              href="/Santhosh_Resume.pdf"
+              download="Santhosh_Resume.pdf"
+              className="mt-8 flex justify-center sm:gap-4 gap-3 
+              sm:text-[20px] text-[16px] text-timberWolf 
+              font-bold font-beckman items-center py-3 px-6
+              whitespace-nowrap sm:w-[200px] sm:h-[50px] 
+              w-[160px] h-[45px] rounded-[10px] bg-night 
+              hover:bg-battleGray hover:text-eerieBlack 
+              transition duration-[0.2s] ease-in-out"
+              onMouseOver={() => {
+                const btn = document.querySelector('.download-btn');
+                if(btn) btn.setAttribute('src', downloadHover);
+              }}
+              onMouseOut={() => {
+                const btn = document.querySelector('.download-btn');
+                if(btn) btn.setAttribute('src', download);
+              }}>
+              RESUME
+              <img
+                src={download}
+                alt="download"
+                className="download-btn sm:w-[26px] sm:h-[26px] 
+                w-[23px] h-[23px] object-contain"
+              />
+            </a>
           </div>
           <div
-            className="w-screen flex flex-col items-start 
+            className="w-full flex flex-col items-start 
             justify-center sm:-ml-[3rem] xxs:mt-4"></div>
 
           <div></div>
@@ -87,7 +116,7 @@ const Hero = () => {
             lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
             sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
             src={shaq}
-            alt="shaquille"
+            alt="SANTHOSH"
           />
         </div>
       </section>

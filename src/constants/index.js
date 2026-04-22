@@ -1,22 +1,4 @@
 import {
-  frontend,
-  backend,
-  ux,
-  prototyping,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  git,
-  figma,
-  docker,
-  postgresql,
-  rubyrails,
-  graphql,
   komikult,
   leaderboard,
   math,
@@ -27,7 +9,12 @@ import {
   dcc,
   kelhel,
   microverse,
+  promptix,
+  ngo,
 } from '../assets';
+import sklearn from '../assets/tech/sklearn.png';
+import express from '../assets/tech/express.png';
+import nextjs from '../assets/tech/nextjs.png';
 
 export const navLinks = [
   {
@@ -46,79 +33,117 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Frontend Developer',
-    icon: frontend,
+    title: 'Full-Stack Development',
+    icon: '💻',
+    subtitle: 'MERN · Next.js',
+    description:
+      'Building end-to-end web apps with React, Next.js, Node.js, Express, and MongoDB.',
   },
   {
-    title: 'Backend Developer',
-    icon: backend,
+    title: 'AI / ML Exploration',
+    icon: '🧠',
+    subtitle: 'Models · APIs',
+    description:
+      'Integrating intelligent systems, ML models, and AI APIs into real-world applications.',
   },
   {
-    title: 'UI/UX Design',
-    icon: ux,
+    title: 'Data Science',
+    icon: '📊',
+    subtitle: 'Python · Analytics',
+    description:
+      'Performing EDA, data analysis, and visualization using Python, Pandas, and NumPy.',
   },
   {
-    title: 'Software Prototyping',
-    icon: prototyping,
+    title: 'Problem Solving',
+    icon: '⚙️',
+    subtitle: 'DSA · LeetCode',
+    description:
+      'Sharpening algorithmic thinking through data structures, patterns, and coding challenges.',
   },
 ];
 
 const technologies = [
+  // Languages
   {
-    name: 'HTML 5',
-    icon: html,
+    name: 'Python',
+    icon: 'https://img.icons8.com/color/96/python--v1.png',
   },
   {
-    name: 'CSS 3',
-    icon: css,
+    name: 'Java',
+    icon: 'https://img.icons8.com/color/96/java-coffee-cup-logo--v1.png',
+  },
+  // Frontend
+  {
+    name: 'React.js',
+    icon: 'https://img.icons8.com/plasticine/100/react.png',
   },
   {
-    name: 'JavaScript',
-    icon: javascript,
-  },
-  {
-    name: 'TypeScript',
-    icon: typescript,
-  },
-  {
-    name: 'React JS',
-    icon: reactjs,
-  },
-  {
-    name: 'Redux Toolkit',
-    icon: redux,
+    name: 'Next.js',
+    icon: nextjs,
   },
   {
     name: 'Tailwind CSS',
-    icon: tailwind,
+    icon: 'https://img.icons8.com/color/96/tailwindcss.png',
+  },
+  // Backend
+  {
+    name: 'Node.js',
+    icon: 'https://img.icons8.com/color/96/nodejs.png',
   },
   {
-    name: 'Node JS',
-    icon: nodejs,
+    name: 'Express.js',
+    icon: 'https://img.icons8.com/ios/100/ffffff/express-js.png',
+  },
+  // Databases
+  {
+    name: 'MongoDB',
+    icon: 'https://img.icons8.com/color/96/mongodb.png',
   },
   {
-    name: 'Rails',
-    icon: rubyrails,
+    name: 'SQL',
+    icon: 'https://img.icons8.com/color/96/mysql-logo.png',
+  },
+  // AI/ML & Data
+  {
+    name: 'NumPy',
+    icon: 'https://img.icons8.com/color/96/numpy.png',
   },
   {
-    name: 'graphql',
-    icon: graphql,
+    name: 'Pandas',
+    icon: 'https://img.icons8.com/color/96/pandas.png',
   },
   {
-    name: 'postgresql',
-    icon: postgresql,
+    name: 'Scikit-Learn',
+    icon: sklearn,
+  },
+  // Tools & Platforms
+  {
+    name: 'Git',
+    icon: 'https://img.icons8.com/color/96/git.png',
   },
   {
-    name: 'git',
-    icon: git,
+    name: 'GitHub',
+    icon: 'https://img.icons8.com/glyph-neue/96/ffffff/github.png',
   },
   {
-    name: 'figma',
-    icon: figma,
+    name: 'Docker',
+    icon: 'https://img.icons8.com/color/96/docker.png',
   },
   {
-    name: 'docker',
-    icon: docker,
+    name: 'Figma',
+    icon: 'https://img.icons8.com/color/96/figma--v1.png',
+  },
+  {
+    name: 'Vercel',
+    icon: 'https://cdn.simpleicons.org/vercel/white',
+  },
+  {
+    name: 'Render',
+    icon: 'https://cdn.simpleicons.org/render/white',
+  },
+  {
+    name: 'Netlify',
+    icon: 'https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png',
   },
 ];
 
@@ -156,8 +181,8 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
-    name: 'KomiKult',
-    description: 'A comic characters list app that displays Marvel characters.',
+    name: 'Promptrix AI',
+    description: 'Promptrix AI is a text-to-image generation tool that converts user prompts into AI-generated visuals.',
     tags: [
       {
         name: 'react',
@@ -168,103 +193,44 @@ const projects = [
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'express',
         color: 'pink-text-gradient',
       },
+      {
+        name: 'node.js',
+        color: 'blue-text-gradient',
+      },
     ],
-    image: komikult,
-    repo: 'https://github.com/shaqdeff/KomiKult',
-    demo: 'https://shaqdeff.github.io/KomiKult/',
+    image: promptix,
+    repo: 'https://github.com/kalviumcommunity/S70_santhosh_Capstone_PromptixAI',
+    demo: 'https://promptix-ai.onrender.com/',
   },
   {
     id: 'project-2',
-    name: 'Leaderboard',
+    name: 'NGO Impact Analysis',
     description:
-      'A leaderboard list app that displays scores submitted by different players.',
+      'Evaluated public health trends using NFHS datasets by cleaning and analyzing data to support data-driven NGO decisions.',
     tags: [
       {
-        name: 'react',
+        name: 'python',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
+        name: 'pandas',
         color: 'green-text-gradient',
       },
-      {
-        name: 'scss',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: leaderboard,
-    repo: 'https://github.com/shaqdeff/Leaderboard',
-    demo: 'https://shaqdeff.github.io/Leaderboard/',
-  },
-  {
-    id: 'project-3',
-    name: 'Math Magicians',
-    description: 'This is a single-page calculator app built with React',
-    tags: [
       {
         name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
         color: 'pink-text-gradient',
       },
-    ],
-    image: math,
-    repo: 'https://github.com/shaqdeff/Math-Magicians',
-    demo: 'https://inspiring-medovik-37d3b3.netlify.app/',
-  },
-  {
-    id: 'project-4',
-    name: 'Movie Metro',
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
-    tags: [
       {
-        name: 'nextjs',
+        name: 'eda',
         color: 'blue-text-gradient',
       },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
     ],
-    image: movie,
-    repo: 'https://github.com/shaqdeff/Movie-Metro',
-    demo: 'https://movie-metro.netlify.app/',
-  },
-  {
-    id: 'project-5',
-    name: 'Nyeusi Fest Site',
-    description:
-      'This is a demo concert website for a music festival called Nyeusi.',
-    tags: [
-      {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
-      },
-    ],
-    image: nyeusi,
-    repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
-    demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
+    image: ngo,
+    repo: 'https://github.com/santhoshjr007/NGO-IMPACT-ANALYSIS',
+    demo: 'https://ngo-impact-analysis.vercel.app/',
   },
 ];
 

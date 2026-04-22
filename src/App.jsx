@@ -8,40 +8,53 @@ import {
   Tech,
   Projects,
 } from './components';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 
-const App = () => {
+const AppContent = () => {
+  const { isDark } = useTheme();
+
   return (
     <BrowserRouter>
-      <div className="relative z-0">
-        <div>
+      <div className={`relative z-0 transition-colors duration-300 ${isDark ? 'dark' : ''}`}>
+
+        {/* Navbar + Hero */}
+        <div className={isDark ? 'bg-night' : ''}>
           <Navbar />
           <Hero />
         </div>
 
-        <div className="bg-about bg-cover bg-center bg-no-repeat">
+        {/* About */}
+        <div className={`bg-cover bg-center bg-no-repeat transition-colors duration-300 ${isDark ? 'bg-night' : 'bg-about'}`}>
           <About />
         </div>
 
+        {/* Tech - already dark, no change */}
         <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
           <Tech />
         </div>
 
-        <Projects />
-
-        <div
-          className="bg-experience bg-cover bg-center bg-no-repeat 
-            rounded-tl-[150px] rounded-br-[150px]">
-          <div
-            className="bg-experienceLight bg-cover bg-center 
-            bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
-            <Experience />
-          </div>
+        {/* Projects */}
+        <div className={`transition-colors duration-300 ${isDark ? 'bg-night' : 'bg-flashWhite'}`}>
+          <Projects />
         </div>
+
+        {/* Experience - Hidden since no work experience */}
+
+        {/* Contact */}
         <div className="relative z-0">
           <Contact />
         </div>
+
       </div>
     </BrowserRouter>
+  );
+};
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 };
 

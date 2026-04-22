@@ -9,12 +9,13 @@ import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
+import { useTheme } from '../context/ThemeContext';
 
-const ExperienceCard = ({ experience }) => (
+const ExperienceCard = ({ experience, isDark }) => (
   <VerticalTimelineElement
     contentStyle={{
-      background: '#eaeaec',
-      color: '#292929',
+      background: isDark ? '#292929' : '#eaeaec',
+      color: isDark ? '#d4d4d8' : '#292929',
       boxShadow:
         'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
     }}
@@ -52,6 +53,7 @@ const ExperienceCard = ({ experience }) => (
 );
 
 const Experience = () => {
+  const { isDark } = useTheme();
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -66,12 +68,12 @@ const Experience = () => {
       <div className="mt-20 flex flex-col">
         <VerticalTimeline className="vertical-timeline-custom-line">
           {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+            <ExperienceCard key={index} experience={experience} isDark={isDark} />
           ))}
           <VerticalTimelineElement
             contentStyle={{
-              background: '#eaeaec',
-              color: '#292929',
+              background: isDark ? '#292929' : '#eaeaec',
+              color: isDark ? '#d4d4d8' : '#292929',
               boxShadow:
                 'rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
               display: 'flex',

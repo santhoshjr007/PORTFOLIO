@@ -32,7 +32,7 @@ const ProjectCard = ({
       <img
         src={image}
         alt={name}
-        className="absolute w-full h-full object-cover rounded-[24px]"
+        className="absolute w-full h-full object-cover rounded-[24px] grayscale"
       />
 
       {active !== id ? (
@@ -117,7 +117,7 @@ const Projects = () => {
     <div className="-mt-[6rem]">
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>Case Studies</p>
-        <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
       <div className="w-full flex">
