@@ -68,7 +68,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile */}
         <div className="sm:hidden flex flex-1 w-full justify-end items-center gap-3">
           {/* Mobile toggle */}
           <button
@@ -84,50 +83,6 @@ const Navbar = () => {
               </span>
             </span>
           </button>
-
-          {toggle ? (
-            <div
-              className={`p-6 fixed top-0 left-0 w-full h-[100vh] z-10 menu ${
-                toggle ? 'menu-open' : 'menu-close'
-              } transition-colors duration-300 ${isDark ? 'bg-night' : 'bg-flashWhite'}`}>
-              <div className="flex justify-end">
-                <img
-                  src={close}
-                  alt="close"
-                  className="w-[22px] h-[22px] object-contain cursor-pointer"
-                  onClick={() => setToggle(!toggle)}
-                />
-              </div>
-              <ul
-                className="list-none flex flex-col -gap-[1rem] 
-                items-start justify-end mt-[10rem] -ml-[35px]">
-                {navLinks.map((nav) => (
-                  <li
-                    id={nav.id}
-                    key={nav.id}
-                    className={`${
-                      active === nav.title
-                        ? 'text-french'
-                        : isDark ? 'text-timberWolf' : 'text-eerieBlack'
-                    } text-[88px] font-bold font-arenq 
-                      uppercase tracking-[1px] cursor-pointer`}
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setActive(nav.title);
-                    }}>
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
-            <img
-              src={menu}
-              alt="menu"
-              className="w-[34px] h-[34px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
-          )}
         </div>
       </div>
     </nav>
