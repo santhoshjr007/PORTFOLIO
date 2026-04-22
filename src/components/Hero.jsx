@@ -113,7 +113,7 @@ const Hero = () => {
         <div>
           <img
             className="absolute bottom-0 right-0 z-10 w-auto 
-            h-[50vh] sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
+            h-[35vh] xs:h-[40vh] sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
             src={shaq}
             alt="SANTHOSH"
           />
